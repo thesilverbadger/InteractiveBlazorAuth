@@ -16,7 +16,7 @@ builder.Services
     .AddInteractiveWebAssemblyComponents();
 
 
-builder.Services.AddScoped<IRenderModeExplainer, ServerExplainer>();
+builder.Services.AddScoped<IRenderModeExplainer, ServerRenderModeExplainer>();
 builder.Services.AddScoped<ICallApi, CallApiFromServer>();
 builder.Services.AddSingleton<IUserTokenStore, ServerSideTokenStore>();
 
