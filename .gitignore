@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # IdentityServer Signing Keys
 IdentityServer/keys
+/.idea
