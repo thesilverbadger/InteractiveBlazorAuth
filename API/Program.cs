@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication()
     .AddJwtBearer(opt =>
     {
-        opt.Authority = "https://localhost:5001";
+        opt.Authority = "https://localhost:55293";
         opt.TokenValidationParameters.ValidateAudience = false;
         opt.TokenValidationParameters.ValidTypes = new[] { "at+jwt" };
         opt.MapInboundClaims = false;

@@ -42,18 +42,19 @@ builder.Services.AddAuthentication(opt =>
     })
     .AddOpenIdConnect("oidc", opt =>
     {
-        opt.Authority = "https://localhost:5001";
+        opt.Authority = "https://localhost:55293";
 
-        opt.ClientId = "interactive.confidential.short";
-        opt.ClientSecret = "secret";
+        opt.ClientId = "blackbird";
+        opt.ClientSecret = "b3881fad-d0ea-4cb7-a524-7d799dbda067";
         opt.ResponseType = "code";
         opt.ResponseMode = "query";
 
         opt.Scope.Clear();
         opt.Scope.Add("openid");
         opt.Scope.Add("profile");
-        opt.Scope.Add("api");
-        opt.Scope.Add("offline_access");
+        opt.Scope.Add("customer.read");
+        opt.Scope.Add("customer.manage");
+        opt.Scope.Add("roles");
 
         opt.MapInboundClaims = false;
         opt.TokenValidationParameters.NameClaimType = "name";
